@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bundesliga</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="resources/css/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Bundesliga (<span class="matchday">XX</span>. Spieltag)</h1>
+    </header>
+    <div id="table">
+        <table>
+            <thead>
+                <tr>
+                    <th>Position</th>
+                    <th></th>
+                    <th>Team</th>
+                    <th>Spiele</th>
+                    <th>Punkte</th>
+                    <th>Gewonnen</th>
+                    <th>Unentschieden</th>
+                    <th>Verloren</th>
+                    <th>Torverhältnis</th>
+                    <th>Nächster Gegner</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+</body>
+<template id="table-entry-template">
+    <tr data-team-id="{{team}}">
+        <td class="position">{{position}}</td>
+        <td class="logo"><img src="{{logo}}" /></td>
+        <td class="team">{{team}}</td>
+        <td class="matches">{{matches}}</td>
+        <td class="points">{{points}}</td>
+        <td class="matches-won">{{won}}</td>
+        <td class="matches-draw">{{draw}}</td>
+        <td class="matches-lost">{{lost}}</td>
+        <td class="goals">{{gd}}</td>
+        <td class="next-opponent" data-opponent-id="{{opponentID}}">{{opponent}}</td>
+    </tr>
+</template>
+<script type="application/javascript" src="vendors/AJAXHelper.js" defer></script>
+<script type="application/javascript" src="resources/js/Team.js" defer></script>
+<script type="application/javascript" src="resources/js/app.js" defer></script>
+
+</html>
