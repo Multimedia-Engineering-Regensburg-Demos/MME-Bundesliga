@@ -5,10 +5,29 @@ var Bundesliga = Bundesliga || {};
 Bundesliga.App = (function() {
   "use strict";
 
-  var that = {};
+  var that = {},
+    data,
+    table;
 
   function init() {
-    // start here
+    initTableView();
+    initDataProvider();
+  }
+
+  function initTableView() {
+    let matchDayEl = document.querySelector(".matchday"),
+      tableEl = document.querySelector("#table table");
+    table = Bundesliga.TableView(matchDayEl, tableEl);
+  }
+
+  function initDataProvider() {
+    data = Bundesliga.DataProvider();
+    data.addEventListener("onUpdateAvailable", onDataUpdated);
+    data.update();
+  }
+
+  function onDataUpdated(data) {
+    table.render(data.table);
   }
 
   that.init = init;
