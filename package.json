@@ -1,0 +1,22 @@
+{
+  "name": "mme-bundesliga",
+  "version": "1.0.0",
+  "description": "A viewer for the bundesliga table",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Bundesliga.git"
+  },
+  "author": "Alexander Bazo <alexander.bazo@ur.de>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Bundesliga/issues"
+  },
+  "homepage": "https://github.com/Multimedia-Engineering-Regensburg-Demos/MME-Bundesliga#readme",
+  "dependencies": {
+    "http-server": "^0.11.1"
+  }
+}
